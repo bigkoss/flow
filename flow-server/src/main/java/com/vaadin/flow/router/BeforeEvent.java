@@ -305,8 +305,6 @@ public abstract class BeforeEvent extends EventObject {
         } else {
             forwardTo(new NavigationStateBuilder(ui.getRouter())
                     .withTarget(forwardTargetComponent).build());
-            // forwardTo(getNavigationState(forwardTargetComponent,
-            // RouteParameters.empty(), null));
         }
     }
 
@@ -338,9 +336,7 @@ public abstract class BeforeEvent extends EventObject {
                 .ifPresent(target -> forwardTo(getNavigationState(target,
                         RouteParameters.empty(), location)));
 
-        // TODO: if not present ?
-        // Inform that forward target location is not known.
-        // forwardToUrl = trimPath(location);
+        // TODO: what to do if not present ?
     }
 
     /**
@@ -419,11 +415,6 @@ public abstract class BeforeEvent extends EventObject {
         } else {
             rerouteTo(new NavigationStateBuilder(ui.getRouter())
                     .withTarget(routeTargetType).build());
-
-            // TODO:
-            // rerouteTo(getNavigationState(routeTargetType,
-            // RouteParameters.empty(),
-            // null));
         }
     }
 
@@ -456,8 +447,6 @@ public abstract class BeforeEvent extends EventObject {
                         RouteParameters.empty(), route)));
 
         // TODO: what to do if not present?
-        // Inform that reroute target location is not known.
-        // rerouteToUrl = trimPath(route);
     }
 
     /**
