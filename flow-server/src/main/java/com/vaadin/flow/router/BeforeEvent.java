@@ -335,8 +335,6 @@ public abstract class BeforeEvent extends EventObject {
         getSource().getRegistry().getNavigationTarget(location)
                 .ifPresent(target -> forwardTo(getNavigationState(target,
                         RouteParameters.empty(), location)));
-
-        // TODO: what to do if not present ?
     }
 
     /**
@@ -445,8 +443,6 @@ public abstract class BeforeEvent extends EventObject {
         getSource().getRegistry().getNavigationTarget(route)
                 .ifPresent(target -> rerouteTo(getNavigationState(target,
                         RouteParameters.empty(), route)));
-
-        // TODO: what to do if not present?
     }
 
     /**
