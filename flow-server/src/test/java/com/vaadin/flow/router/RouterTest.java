@@ -3029,10 +3029,7 @@ public class RouterTest extends RoutingTestBase {
             throws InvalidRouteConfigurationException {
         expectedEx.expect(IllegalArgumentException.class);
         expectedEx.expectMessage(String.format(
-                "Navigation target '%s' requires a parameter and can not be resolved. "
-                        + "Use 'public <T, C extends Component & HasUrlParameter<T>> "
-                        + "String getUrl(Class<? extends C> navigationTarget, T parameter)' "
-                        + "instead",
+                "Navigation target '%s' requires a parameter.",
                 RouteWithParameter.class.getName()));
         setNavigationTargets(RouteWithParameter.class);
 

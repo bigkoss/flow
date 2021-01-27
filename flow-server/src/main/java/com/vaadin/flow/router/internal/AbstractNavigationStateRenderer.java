@@ -690,7 +690,7 @@ public abstract class AbstractNavigationStateRenderer
             BeforeEvent beforeEvent) {
         if (beforeEvent.hasForwardTarget()
                 && !isSameNavigationState(beforeEvent.getForwardTargetType(),
-                        beforeEvent.getRerouteTargetRouteParameters())) {
+                beforeEvent.getForwardTargetRouteParameters())) {
             return Optional.of(TransitionOutcome.FORWARDED);
         }
 
