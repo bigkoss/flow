@@ -297,7 +297,7 @@ public abstract class NodeUpdater implements FallibleCommand {
 
         defaults.put("webpack", "5.16.0");
         defaults.put("webpack-cli", "4.4.0");
-        defaults.put("webpack-dev-server", "3.11.2");
+        defaults.put("webpack-dev-server", "v4.0.0-beta.0");
         defaults.put("copy-webpack-plugin", "7.0.0");
         defaults.put("compression-webpack-plugin", "7.1.2");
         defaults.put("extra-watch-webpack-plugin", "1.0.3");
