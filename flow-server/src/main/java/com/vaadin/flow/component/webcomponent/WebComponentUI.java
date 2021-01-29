@@ -36,6 +36,7 @@ import com.vaadin.flow.internal.nodefeature.NodeProperties;
 import com.vaadin.flow.router.HasUrlParameter;
 import com.vaadin.flow.router.PreserveOnRefresh;
 import com.vaadin.flow.router.QueryParameters;
+import com.vaadin.flow.router.Router;
 import com.vaadin.flow.server.VaadinRequest;
 import com.vaadin.flow.server.VaadinSession;
 import com.vaadin.flow.server.webcomponent.WebComponentBinding;
@@ -278,6 +279,25 @@ public class WebComponentUI extends UI {
                 .getSessionRegistry(VaadinSession.getCurrent());
     }
 
+    /**
+     * Always returns <code>null</code>, since WebComponentUI doesn't
+     * support navigation.
+     *
+     * @return <code>null</code>
+     *
+     * @deprecated For internal use only. Will be removed in the future.
+     */
+    @Deprecated
+    @Override
+    public Router getRouter() {
+        return null;
+    }
+
+    /**
+     * Returns false, since WebComponentUI does not support navigation.
+     *
+     * @return <code>false</code>
+     */
     @Override
     public boolean isNavigationSupported() {
         return false;
