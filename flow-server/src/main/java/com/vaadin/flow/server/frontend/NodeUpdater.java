@@ -295,26 +295,26 @@ public abstract class NodeUpdater implements FallibleCommand {
         defaults.put("typescript", "4.0.3");
         defaults.put("ts-loader", "8.0.12");
 
-        defaults.put("webpack", "4.42.0");
-        defaults.put("webpack-cli", "3.3.11");
-        defaults.put("webpack-dev-server", "3.11.0");
-        defaults.put("copy-webpack-plugin", "5.1.2");
-        defaults.put("compression-webpack-plugin", "4.0.1");
+        defaults.put("webpack", "5.16.0");
+        defaults.put("webpack-cli", "4.4.0");
+        defaults.put("webpack-dev-server", "3.11.2");
+        defaults.put("copy-webpack-plugin", "7.0.0");
+        defaults.put("compression-webpack-plugin", "7.1.2");
         defaults.put("extra-watch-webpack-plugin", "1.0.3");
-        defaults.put("webpack-merge", "4.2.2");
-        defaults.put("css-loader", "4.2.1");
+        defaults.put("webpack-merge", "5.7.3");
+        defaults.put("css-loader", "5.0.1");
         defaults.put("extract-loader", "5.1.0");
         defaults.put("lit-css-loader", "0.0.4");
-        defaults.put("file-loader", "6.1.0");
-        defaults.put("loader-utils", "1.4.0");
+        defaults.put("file-loader", "6.2.0");
+        defaults.put("loader-utils", "2.0.0");
         defaults.put("lit-element", "2.3.1");
-        defaults.put("lit-html", "1.2.1");
-        final String WORKBOX_VERSION = "5.1.4";
+        defaults.put("lit-html", "1.3.0");
+        final String WORKBOX_VERSION = "6.0.2";
         defaults.put("workbox-webpack-plugin", WORKBOX_VERSION);
         defaults.put("workbox-core", WORKBOX_VERSION);
         defaults.put("workbox-precaching", WORKBOX_VERSION);
         defaults.put("glob", "7.1.6");
-        defaults.put("webpack-manifest-plugin", "2.2.0");
+        defaults.put("webpack-manifest-plugin", "3.0.0");
         defaults.put("@types/validator", "13.1.0");
         defaults.put("validator", "13.1.17");
         // Constructable style sheets is only implemented for chrome,
