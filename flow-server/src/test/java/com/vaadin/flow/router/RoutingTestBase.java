@@ -25,7 +25,6 @@ import org.junit.Before;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.UI;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 
 public class RoutingTestBase {

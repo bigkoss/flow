@@ -8,8 +8,6 @@ import java.util.function.Consumer;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import com.vaadin.flow.router.RoutingTestBase;
-import com.vaadin.tests.util.MockUI;
 import net.jcip.annotations.NotThreadSafe;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -131,7 +129,7 @@ public class BootstrapHandlerDependenciesTest {
     @StyleSheet(value = "1.css", loadMode = LoadMode.LAZY)
     @StyleSheet(value = "2.css", loadMode = LoadMode.LAZY)
     @HtmlImport(value = "1.html", loadMode = LoadMode.LAZY)
-    @HtmlImport(value = "2.html", loadMode = LoadMode.LAZY) {
+    @HtmlImport(value = "2.html", loadMode = LoadMode.LAZY)
     private static class UIAnnotated_ImportOrderTest_Lazy extends UI {
     }
 
@@ -228,6 +226,15 @@ public class BootstrapHandlerDependenciesTest {
             getPage().addJavaScript("2.js");
             getPage().addJavaScript("1.js");
         }
+    }
+
+    private static Router createRouter() {
+        Router router = Mockito.mock(Router.class);
+        RouteRegistry registry = Mockito.mock(RouteRegistry.class);
+        Mockito.when(router.resolveNavigationTarget(Mockito.any(),
+                Mockito.any())).thenReturn(Optional.empty());
+        Mockito.when(router.getRegistry()).thenReturn(registry);
+        return router;
     }
 
     private TestVaadinServletService service;
